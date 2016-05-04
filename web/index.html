@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>WEB - HOME</title>
+        <link rel="stylesheet" href="res/css/estilosLogin.css">    
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <style type="text/css"> 
+            a:link { 
+                text-decoration:none; 
+            } 
+        </style>
+    </head>
+
+    <body style="background: #fefefe">
+        <img id="imgProjeto" src="res/img/PROJETO_WEB.png" width="1100" height="100" class="login-img"/>
+        <div style="margin-left: 39%">
+            <a href="#" data-toggle="modal" data-target="#login-modal"><input type="submit" name="enter" value="             ENTRAR             " class="login loginmodal-submit" ></a>
+            <a href="#" data-toggle="modal" data-target="#cadastrar-modal"><input type="submit" name="enter" value="             CADASTRAR            " class="login loginmodal-submit-cadastrar" style="margin-left: 1%"></a>
+        </div>
+        <!--ENTRAR DIALOG-->
+        <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="loginmodal-container">
+                    <h1>Entrar</h1><br>
+                    <!--<img id="profile-img" class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" style="height:120px; width:120px; margin-left: 29%; margin-bottom: 5%; border-radius: 25px" />-->
+                    <form action="Login" method="POST">
+                        <input id="user" type="text" name="user" placeholder="Login">
+                        <input type="password" name="pass" placeholder="Senha">
+                        <input type="submit" name="btnLogin" class="login loginmodal-submit" value="Login">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!--CADASTRAR DIALOG-->
+        <div class="modal fade" id="cadastrar-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="loginmodal-container">
+                    <h1>Cadastrar</h1><br>
+                    <form action="CadastrarUsuario" method="POST">
+                        <input type="text" name="nome" placeholder="Nome">
+                        <input type="text" name="login" placeholder="Login">
+                        <input type="password" name="pass" placeholder="Senha">
+                        <input type="text" name="email" placeholder="Email">
+                        <input type="submit" name="btnCadastrar" class="login loginmodal-submit" value="Cadastrar">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
